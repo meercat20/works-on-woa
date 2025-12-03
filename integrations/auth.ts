@@ -41,7 +41,7 @@ export default (config: AstroAuthConfig = {}): AstroIntegration => ({
                     })
                 })
                 addMiddleware({
-                    entrypoint: './src/auth_routes/middleware.ts',
+                    entrypoint: process.cwd() + '/src/auth_routes/middleware',
                     order: 'pre'
                 });
             }
